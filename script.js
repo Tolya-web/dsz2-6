@@ -15,7 +15,7 @@ function back() {
 function equal() {
     var exp = document.form.textview.value;
     if (exp) {
-        var result = eval(exp);
+        var result = eval(exp).toFixed(10);
         document.form.textview.value = result;
         log += exp + ' = ' + result + '\r\n';
     }
@@ -24,7 +24,7 @@ function equal() {
 function pow() {
     var exp = document.form.textview.value;
     if (exp) {
-        var result = eval('Math.pow(' + exp + ', 2)');
+        var result = eval('Math.pow(' + exp + ', 2)').toFixed(10);
         document.form.textview.value = result;
         log += exp + '^2 = ' + result + '\r\n';
 
@@ -37,7 +37,7 @@ function tg() {
     if (exp) {
         var deg = eval(exp);
         var rad = deg * Math.PI / 180;
-        var result = eval('Math.tan(' + rad + ')');
+        var result = eval('Math.tan(' + rad + ')').toFixed(10);
         document.form.textview.value = result;
         log += 'tg ' + exp + ' = ' + result + '\r\n';
     }
@@ -48,7 +48,7 @@ function sin() {
     if (exp) {
         var deg = eval(exp);
         var rad = deg * Math.PI / 180;
-        var result = eval('Math.sin(' + rad + ')');
+        var result = eval('Math.sin(' + rad + ')').toFixed(10);
         document.form.textview.value = result;
         log += 'sin ' + exp + ' = ' + result + '\r\n';
     }
@@ -59,7 +59,7 @@ function cos() {
     if (exp) {
         var deg = eval(exp);
         var rad = deg * Math.PI / 180;
-        var result =  eval('Math.cos(' + rad + ')');
+        var result =  eval('Math.cos(' + rad + ')').toFixed(10);
         document.form.textview.value = result;
         log += 'cos ' + exp + ' = ' + result + '\r\n';
     }
@@ -70,7 +70,7 @@ function ctg() {
     if (exp) {
         var deg = eval(exp);
         var rad = deg * Math.PI / 180;
-        var result = 1 / eval('Math.tan(' + rad + ')');
+        var result = (1 / eval('Math.tan(' + rad + ')')).toFixed(10);
         document.form.textview.value = result;
         log += 'ctg ' + exp + ' = ' + result + '\r\n';
 
@@ -80,7 +80,7 @@ function ctg() {
 function tg_rad() {
     var exp = document.form.textview.value;
     if (exp) {
-        var result = eval('Math.tan(' + exp + ')');
+        var result = eval('Math.tan(' + exp + ')').toFixed(10);
         document.form.textview.value = result;
         log += 'tg_rad ' + exp + ' = ' + result + '\r\n';
     }
@@ -89,7 +89,7 @@ function tg_rad() {
 function sin_rad() {
     var exp = document.form.textview.value;
     if (exp) {
-        var result = eval('Math.sin(' + exp + ')');
+        var result = eval('Math.sin(' + exp + ')').toFixed(10);
         document.form.textview.value = result;
         log += 'sin_rad ' + exp + ' = ' + result + '\r\n';
     }
@@ -98,7 +98,7 @@ function sin_rad() {
 function cos_rad() {
     var exp = document.form.textview.value;
     if (exp) {
-        var result =  eval('Math.cos(' + exp + ')');
+        var result =  eval('Math.cos(' + exp + ')').toFixed(10);
         document.form.textview.value = result;
         log += 'cos_rad ' + exp + ' = ' + result + '\r\n';
     }
@@ -107,7 +107,7 @@ function cos_rad() {
 function ctg_rad() {
     var exp = document.form.textview.value;
     if (exp) {
-        var result = 1 / eval('Math.tan(' + exp + ')');
+        var result = (1 / eval('Math.tan(' + exp + ')')).toFixed(10);
         document.form.textview.value = result;
         log += 'ctg_rad ' + exp + ' = ' + result + '\r\n';
 
